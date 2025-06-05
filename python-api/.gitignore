@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env.*
+temp/
+*.log
+*.sqlite3
+*.db
+*.key
+*.enc
+*.hash
+.DS_Store
+# VSCode settings
+.vscode/
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
