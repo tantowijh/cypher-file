@@ -86,7 +86,7 @@ export default function Home() {
     formData.append("keyword", keyword);
 
     try {
-      const response = await axios.post(`/api/file/${operation}`, formData, {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/file/${operation}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
