@@ -161,10 +161,10 @@ export default function Home() {
               AES (Advanced Encryption Standard) menggunakan kunci yang sama untuk enkripsi dan dekripsi, karena itu kunci yang dihasilkan akan disimpan di server dengan enkripsi Vigenère dari username dan kata kunci Anda.
             </p>
           </CardDescription>
-          <CardContent className="flex gap-4 p-0 py-4">
+          <CardContent className="md:flex gap-4 space-y-4 p-0 py-4">
 
             {/* Bagian Username dan Kata Kunci */}
-            <Card className="w-2/4">
+            <Card className="w-full md:w-2/4">
               <CardHeader>
                 <CardTitle>Vigenère Cipher</CardTitle>
                 <CardDescription>Enkripsi detail pengguna menggunakan Vigenère cipher</CardDescription>
@@ -229,7 +229,7 @@ export default function Home() {
                     <div className="space-y-4 mt-4">
                       <div className="space-y-2">
                         <Label htmlFor="file-upload">Pilih File untuk Dienkripsi</Label>
-                        <Input id="file-upload" type="file" onChange={handleFileChange} />
+                        <Input id="file-upload" type="file" accept="*/*" onChange={handleFileChange} />
                       </div>
 
                       <Button onClick={() => handleOperation("encrypt")} className="w-full" disabled={isLoading}>
@@ -243,7 +243,7 @@ export default function Home() {
                     <div className="space-y-4 mt-4">
                       <div className="space-y-2">
                         <Label htmlFor="file-verify">Pilih File untuk Diverifikasi</Label>
-                        <Input id="file-verify" type="file" onChange={handleFileChange} />
+                        <Input id="file-verify" type="file" accept="*/*" onChange={handleFileChange} />
                       </div>
 
                       <Button onClick={() => handleOperation("verify")} className="w-full" disabled={isLoading}>
@@ -257,7 +257,7 @@ export default function Home() {
                     <div className="space-y-4 mt-4">
                       <div className="space-y-2">
                         <Label htmlFor="file-decrypt">Pilih File Terenkripsi (.enc)</Label>
-                        <Input id="file-decrypt" type="file" onChange={handleFileChange} />
+                        <Input id="file-decrypt" type="file" accept="*/*" onChange={handleFileChange} />
                       </div>
 
                       <Button onClick={() => handleOperation("decrypt")} className="w-full" disabled={isLoading}>
